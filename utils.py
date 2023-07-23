@@ -243,4 +243,4 @@ class NASA_APIConnection(ExperimentalBaseConnection[requests.Session]):
                 print(f"An error occurred: {e}")
                 return None
 
-        return _query_exoplanet_data(table, where, select, order, format, **kwargs)
+        return _query_exoplanet_data(table, where, select, order, **kwargs)
