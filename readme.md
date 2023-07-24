@@ -1,6 +1,6 @@
 # NASA API Connection with Streamlit 🚀
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/your-github-username/nasa-api-streamlit-app/main/app.py)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://nasa-api-connection.streamlit.app/)
 
 ## Introduction
 
