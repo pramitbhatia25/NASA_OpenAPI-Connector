@@ -14,23 +14,45 @@ nasa_conn = st.experimental_connection("nasa", type=NASA_APIConnection, api_key=
 # Streamlit app
 def main():
     st.title("🚀NASA API Connection with Streamlit")
-    st.sidebar.info(
+    st.markdown(
     """
-    This is my submission to the Streamlit Connections Hackathon.
-    [Hackathon Link](https://discuss.streamlit.io/t/connections-hackathon/47574)
-    This app demonstrates a connection to query from NASA Open APIs.
-    Thanks for stopping by!
-    """
-    )
+    This app is an official submission to the Streamlit Connections Hackathon.
+     - [Hackathon Link](https://discuss.streamlit.io/t/connections-hackathon/47574)
+     - [GitHub Repo](https://github.com/pramitbhatia25/NASA_OpenAPI-Connector)
+     - [NASA API's](https://api.nasa.gov/)
+    """)
 
-    st.sidebar.info(
+
+    st.sidebar.markdown(
         """
-        The application currently supports the following API's:
-        APOD, Mars Rover Photos, NeoWs, DONKI & Exoplanet API's
-        """
+🚀 Explore Space with NASA APIs! 🌌
+
+Welcome to our NASA API Streamlit connector! Discover awe-inspiring space imagery, delve into space weather events, browse Mars rover photos, track near-Earth objects, and explore a vast collection of exoplanet data, all at your fingertips!
+
+🛰️ What NASA APIs do we support? 🌠
+
+Astronomy Picture of the Day (APOD): Witness captivating daily images and learn from professional astronomers' insights about the universe's wonders.
+
+Mars Rover Photos: Explore the Red Planet through the lens of NASA's rovers and immerse yourself in the Martian landscape.
+
+Near-Earth Object Web Service (NEOWS): Stay informed about close-approaching asteroids and comets, safeguarding our home planet.
+
+DONKI: Space Weather Database: Discover various space weather events and related information, from solar flares to geomagnetic storms.
+
+Exoplanet Archive: Dive into the fascinating world of exoplanets, distant planets beyond our solar system, with a wealth of data to explore.
+
+🌠 What our app offers? 🚀
+
+Our app provides a user-friendly interface to interact with these powerful NASA APIs. With just a few clicks, you can access real-time and historical space data, customize queries, and visualize intriguing celestial phenomena.
+
+🌌 How to use our app? 🌟
+
+Simply select your preferred NASA API from the menu and follow the intuitive instructions. You can input dates, filter conditions, and choose data tables to retrieve the most relevant and captivating information.
+
+Join us on this cosmic adventure, where the wonders of space await! 🚀✨        """
     )
     # Sidebar menu to select NASA API
-    selected_api = st.sidebar.selectbox("Select a NASA API", ["APOD", "Near-Earth Object Web Service (NEOWS)", "Mars Rover Photos", "DONKI: Space Weather Database", "Exoplanet"])
+    selected_api = st.selectbox("Select a NASA API", ["APOD", "Near-Earth Object Web Service (NEOWS)", "Mars Rover Photos", "DONKI: Space Weather Database", "Exoplanet"])
 
     if selected_api == "APOD":
         today = date_function.today()
